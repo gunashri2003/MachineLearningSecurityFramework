@@ -1,0 +1,201 @@
+
+.hacker-container {
+  background-image: url('/public/images/hack.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  filter: brightness(130%); 
+  
+}
+
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hack-button {
+  background-color: red;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-position 0.3s ease;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  margin-bottom: 320px;
+  margin-right: 70px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.hack-button:hover {
+  background-position: 0 0;
+}
+
+.locker-button,
+.crypto-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  position: absolute;
+  bottom: 280px;
+  border-radius: 10px;
+}
+
+.crypto-encrypt-button,
+.crypto-decrypt-button {
+  padding: 10px 20px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 190px;
+  border-radius: 10px;
+}
+
+
+.crypto-button {
+  background-color: brown;
+  right: 105px;
+}
+
+
+.crypto-encrypt-button{
+  background-color: #FF0044;
+  right: 485px;
+}
+
+.crypto-decrypt-button{
+  background-color: #b97eea;
+  left: 1285px;
+}
+
+.locker-button {
+  background-color: goldenrod;
+  left: 105px;
+}
+
+
+
+.locker-button.visible,
+.crypto-button.visible {
+  opacity: 1;
+}
+
+.locker-button-hidden,
+.crypto-button-hidden {
+  opacity: 0;
+}
+
+.locker-button-slide,
+.crypto-button-slide {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.locker-button-hidden,
+.crypto-button-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeInOut 4s forwards;
+  pointer-events: none;
+}
+
+.overlay img {
+  width: 100vw; 
+  height: 100vh; 
+  object-fit: cover; 
+  pointer-events: none;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+.eyes-container {
+  display: flex;
+}
+
+.swag-eyes {
+  font-size: 28px;
+  margin-bottom: 330px;
+}
+
+.left-eye {
+  margin-left: -50px;
+  animation: left-eye-blink 2s infinite alternate; /* Example animation, replace with your own */
+}
+
+.right-eye {
+  margin-left: 50px;
+  animation: right-eye-blink 2s infinite alternate; /* Example animation, replace with your own */
+}
+
+@keyframes left-eye-blink {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes right-eye-blink {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+
+
+.encryption-input-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 225px;
+  margin-bottom: 16px;
+}
+
+
+.encryption-input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
